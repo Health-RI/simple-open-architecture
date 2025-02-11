@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Governance layer</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Governance layer</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Grouping"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Grouping" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">https://confluence.simplprogramme.eu/display/SIMPL/High+Level+Architecture
+
+The governance layer addresses transversal functionalities that apply to all the forementioned layers as it 
+provides means of protentional contingency against issues the participants might find while using the SMP. The 
+two main capabilities in this layer are composed of human taskforces that either support the participants in 
+finding solutions to technical problems or trigger a response action against security threats in the form of a 
+Computer Security Incident Response Team (CSIRT)
+
+The capabilities provided in the governance layer enable the support and management of Simpl-Open. The governance layer can be divided in two categories of governance capabilities: Support and CSIRT (Computer Security Incident Response Team).
+
+The Support capability is associated with the administration layer of the architecture and will assist Simpl-Open end users when issues arise during installation of Simpl-Open and during the use of other building blocks from Simpl-Open. Three building blocks are currently foreseen in the support category, the first building block is a Support webpage for Simpl-Open users. The second support building block is a Ticketing system where Simpl-Open end users will be able to log and keep track of issues regarding Simpl-Open and the third building block is a Helpdesk where Simpl-Open end users can connect to in case issues remain unsolved.
+
+The Computer Security Incident Response Team capability is the second category of governance capabilities which includes the incident response and threat monitoring building blocks. The Incident response building block will have procedures to respond to security incidents to restore the compromised Simpl-Open functionality as soon as possible. The second building block, Threat monitoring, will proactively monitor and follow-up on possible malicious activities that could affect Simpl-Open to avoid potential security breaches.</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

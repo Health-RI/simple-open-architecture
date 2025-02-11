@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Storage Provisioning</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Storage Provisioning</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-BusinessService"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-BusinessService" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">https://confluence.simplprogramme.eu/display/SIMPL/Annex+6+-+Architecture+building+blocks
+
+Block storage
+Simpl provides an abstraction layer to provision various kinds of storage on the 
+underlying infrastructure. Block storage provides low level storage capabilities to end 
+users to store any type of binary data in ordered blocks
+
+File system provisioning 
+Simpl provides an abstraction layer to provision various kinds of storage on the 
+underlying infrastructure. File systems are provided to end users to store files in 
+structured directories.
+
+https://confluence.simplprogramme.eu/display/SIMPL/Container+Provisioning
+Provisioning of an infrastructure resource is identical for containers, storage and VMs. Details are provided under Containers Provisioning and are also applicable to Storage and VMs.
+In the first step, the Infrastructure Provider (or APP/Data Providers, upon their need) can use the Deployment Script Management to add their deployment scripts. 
+These scripts are Crossplane configuration files, that at the time of execution, will:
+
+A) Provision the infrastructure resources (VM, Container or Storage);
+B) Deploy Applications over the infrastructure resources (if needed);
+C) Load data sets or images on the infrastructure resource (if needed). 
+
+After adding the deployment script (via the available UI or the API), the DeploymentScriptID, which is a unique ID for that deployment script will be returned. 
+
+
+
+In the second step, at the time of creating infrastructure offerings (or bundles of app/data + infrastructure, as it would be required for use cases explained in BP 09A and BP 09B), the DeploymentScriptID is being added to the Self-Description. 
+
+
+
+In the third step, when the offer has been selected and successfully contracted, the Infrastructure Provisioner API (the same API that handles the addition/removal and modifications of the Deployment Scripts in step 1) is being called, and the DeploymentScriptID will be passed to that API for execution. 
+
+Therefore, that DeploymentScriptID is being validated, and if the validation is successful, will be executed. The infrastructure Provisioner Module will (as explained above):
+
+A) Provision the infrastructure resources (VM, Container or Storage).;
+B) Deploy Applications over the infrastructure resources (if needed);
+C) Load data sets or images on the infrastructure resource (if needed). 
+
+And will share back the access data with the consumer. 
+
+
+
+The communication between the triggering module and the infrastructure provisioner is done via a message broker, to keep the process asynchronous. 
+
+https://confluence.simplprogramme.eu/display/SIMPL/ACV+08+-+Infrastructure+Resource+Consumption</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

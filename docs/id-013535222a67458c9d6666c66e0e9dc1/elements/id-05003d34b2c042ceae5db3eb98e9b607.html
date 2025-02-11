@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Integration Layer</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Integration Layer</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Grouping"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Grouping" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">https://confluence.simplprogramme.eu/display/SIMPL/High+Level+Architecture
+
+The integration layer provides the capabilities for participants to securely and trustfully integrate with each other
+
+Consumers can find resources of a data space through the tooling provided by the Resource discovery capability. First, providers make their resources (data, application or infrastructure) discoverable by submitting well-structured metadata description of their resources &#8211; in a standardised format. Then consumers can query the catalogues to find suitable resources within the data space. These catalogues describe the content of the resources, how to consume them, and the policies that apply on this usage.
+
+In the widespread context of Simpl-Open, Security is crucial to protect EU resources. As it will be described in Annex 6, security capabilities are constantly active. The agreed level of security encryption and integrity on every data transmission or resource deployment must be granted for the consumer at any time. For this reason, any provision of a resource will be inevitably deployed along with the security block, providing strong end-to-end security guarantees of all data that is handled by Simpl-Open.
+
+Related to the security capabilities, the functions gathered by Access control &amp; Trust capability will be constantly required whenever any participant  (consumer, provider or governance authority) accesses Simpl-Open. Mapping end user roles with participant attributes (Role-Based Access Control - RBAC &amp; Attribute-Based Access Control - ABAC), as well as authorizations to proceed with an action are addressed here. In this sense, every relation of the user with a data layer building block or infrastructure provisioning is closely screened by the Access Control &amp; Trust. Simpl-Open will provide identification, authentication and authorization (IAA) building block for communication between data space participants, and integrate existing IAA systems of participating organisations for IAA of users within the organisation. To ensure that all usage policies are effectively enforced within the data spaces, Simpl-Open provides a policy enforcement capability. It also provides the necessary capabilities to submit/review/approve onboarding requests and deliver to the applicant the necessary security credentials to join a data space.
+
+The Network capability contains building blocks for the establishment of secure network connections using technologies like virtual private networks. Additionally a firewall protects unwarranted access to Simpl-Open components and backend services. These network capabilities are relevant for connecting to infrastructure resources, as well as setting up the communication channels for data and application transfers.
+
+The Federation management capability encompasses the general orchestration, as well as the supervision of the building blocks. It will oversee that the main principles of federation and interoperability are met by providing the means to connect resources. The federation management will encompass the needed configuration parameters for a well-functioning of Simpl-Open components. Such parameters may include the servers to connect to, rules concerning the lifecycle of recorded data, network configuration, and other parameters.
+
+Finally, the IT Application Framework capability provides the necessary capabilities for the data spaces to deploy the building blocks in accordance with the proposed architecture (e.g. API Gateway, circuit breaker, service mesh, etc.).
+
+Crucially, the Integration layer acts as an entry door towards the other layers. Below sections describe how the Data and Infrastructure layer are organised. The data layer provides blocks related to applications and data, whereas the infrastructure layer provisions computing, storage, and other infrastructure resources. When a consumer needs to access any of the building block belonging to the Data layer, the Access control &amp; Trust capability is triggered to assure the right permissions are given. Additionally, authentication and authorization mechanisms are a prerequisite for executing the Data layer building blocks, such as the Application or Data sharing capabilities.
+
+Once the Integration layer confirms the identity and the role of the end user, the contract capability of the administration layer is activated in order to verify the terms agreed and the Service Level Agreements. After this process, data building blocks can be executed. The explanation above concerning data building blocks is applicable to the Infrastructure layer building blocks in case the consumer is intending to access computing, storage, or other infrastructure resources. Nevertheless, it will be common to combine data and infrastructure resource usage by means of a distributed execution. It must be noted that beyond the usage of data and infrastructure resources in combination, independent use of infrastructure or data alone will be a possibility as well.
+
+When considering the security and orchestration needs for the global usage of any of the Data and Infrastructure layers building blocks, the Integration Security and Federation management will be responsible of the correct encryption and verification deployments, assuring as well a correct allocation and interoperability of the resources. It must be noted however that both the Data and the Infrastructure layers will hold their own local orchestration blocks as explained in their respective sections.</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

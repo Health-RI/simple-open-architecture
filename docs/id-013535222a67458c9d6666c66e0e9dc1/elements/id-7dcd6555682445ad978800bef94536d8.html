@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Infrastructure Layer</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Infrastructure Layer</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Grouping"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Grouping" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">https://confluence.simplprogramme.eu/display/SIMPL/High+Level+Architecture
+
+The infrastructure layer has similar responsibilities to the data layer for managing infrastructure assets. This layer allows the SMP 
+to connect to third-party infrastructure services, such that end users can execute applications on them. The 
+middleware does not provide infrastructure itself, but allows infrastructure providers to open up internal 
+infrastructure towards data space participants. Both elemental computing and storage resources (e.g. virtual 
+machines, file system storage) as well as PaaS services (e.g. databases, AI hardware) can be provided. The 
+infrastructure layer allows end users to discover, utilize, and manage infrastructure services offered by 
+infrastructure providers
+The capabilities provided by this layer enable the consumers to easily provision the necessary computing and storage resources to execute their workloads in a secure and energy-efficient way. 
+
+The infrastructure orchestration, automates the provisioning of the infrastructure resources to enable the various infrastructure providers to interconnect and get exposed via a standard interface. The distributed execution, allows the consumer to deploy applications and execute computations close to the data.
+
+The cloud &amp; edge computing capability provides the opportunity to provision various resources to execute computations or store data in the environment of their choice. The platform-as-a-service building blocks provide several database engines and other platform-level resources. Finally, the HPC capability permits the consumer to perform complex calculations at high speed by providing a cluster of high-performance computers.
+
+The infrastructure building blocks can be easily combined with each other to create even more value for the consumer. For instance, after successfully analysing certain data with the help of the provisioned PaaS analytical resources or the HPC capability, the consumer may want to store the used datasets and/or the results of their calculations. In this case, the PaaS storage building block can easily fulfil the storage needs of the end user. In case a consumer would like to develop a stand-alone application, they may also use various PaaS resources at the same time. They can leverage the different storage options to store each sort of data in the most efficient manner (e.g. the transactional data in a transactional database, while the sensor data in a NoSQL database). Besides, they can use the cloud &amp; edge computing capabilities to deploy and run their applications, and the distributed execution capability even enables them to run the code close to the edge.
+
+Administration layer architecture
+The administration layer addresses the main capabilities that will assure the correct delivery of capabilities within Simpl-Open. Despite being depicted as isolated bubbles, capabilities and building blocks are strongly related and further discussed (see Annex 6). The function of this layer can be described as a set of supervision and management functions that will lead to a better control and interoperability of the rest of Simpl-Open building blocks. Along with the later described governance layer, it will play an executive role within Simpl-Open.
+
+Whenever a consumer accesses a resource through Simpl-Open, the Contracts capability will determine if the licenses are correctly delivered. It will also register the billing terms and will manage the service level agreements as specified by the providers, as well as managing the permissions related to data sharing. The usage contracts will be accessible through this Administration layer every time a consumer requests a data or computing resource.
+
+The Logging, Monitoring and Reporting  capabilities are strongly interconnected. In the case of Logging, it is regarded as the real time information collection, while Monitoring is about screening the collected information and registering alerts and usage information concerning other layer&#180;s building blocks, as well as energy and quality of service optimization. On the other hand, the Reporting capability will handle the historical record of such information, as well as the general platform usage, allowing the relevant stakeholders to export and log the extraction of the information obtained. These two capabilities could be visualised as a supervision of the processes taking part at every layer level within Simpl-Open. Should additional action be taken, the Governance Authority will resolve the situation with the assistance of other Administration layer blocks such as Security or Contracts.
+
+In order to analyse if the resources given by Simpl-Open are meeting contracts, access or security requirements, an auditing tool in the Audit capability will be capable of receiving information inputs from the logging, reporting and monitoring building blocks. By comparing what is expected from Simpl-Open resources and what is actually happening at a resource delivery level, the audit capability will interact with the Logging, Reporting and Monitoring capabilities.
+
+The Administration layer will perform consistent and continuous analysis of the usage with the help of the Reporting and Monitoring capabilities. Along with the Auditing capability, the Administration capabilities will extract valuable information about the resources exchanged between the consumer and the data, application, and infrastructure provider(s). This will include analysis of the usage kept in metrics logging and real-time monitoring, which will be transferred to the reporting capability for a wider history data recording. In this reporting function, performance of deployed resources, the level of efficiency or the usage of the platform and the sustainable utilization will be supervised by the administration.</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
